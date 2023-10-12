@@ -1,0 +1,4 @@
+repository "Pit Scouting Application 2024@Aquidneck_Island_Robotics@cloud"
+  path "/"
+    br "/main"
+    co "/main"

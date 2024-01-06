@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -44,7 +44,6 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -533,50 +532,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612577478}
   m_CullTransparentMesh: 1
---- !u!1 &776694240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 776694242}
-  - component: {fileID: 776694241}
-  m_Layer: 0
-  m_Name: Document Editor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &776694241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776694240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edcd7b5165f23e645b49fdeb3e4f11c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &776694242
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776694240}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &918946874
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,8 +759,7 @@ MonoBehaviour:
   - {fileID: 1384591735}
   - {fileID: 1282195648}
   - {fileID: 2088777325}
-  output: []
-  docEditObject: {fileID: 776694240}
+  docEditObject: {fileID: 1924432746}
 --- !u!4 &1300684439
 Transform:
   m_ObjectHideFlags: 0
@@ -1243,7 +1197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8316497772417965885, guid: 99c57f44b8441cc4e8dd3358da20ed57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GatherData
+      value: SubmitButton
       objectReference: {fileID: 0}
     - target: {fileID: 8316497772417965885, guid: 99c57f44b8441cc4e8dd3358da20ed57, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1263,6 +1217,50 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3937197831196813764, guid: 99c57f44b8441cc4e8dd3358da20ed57, type: 3}
   m_PrefabInstance: {fileID: 1618075100}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1924432746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1924432748}
+  - component: {fileID: 1924432747}
+  m_Layer: 0
+  m_Name: Document Editor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1924432747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924432746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcd7b5165f23e645b49fdeb3e4f11c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1924432748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924432746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2088777323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1395,5 +1393,5 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1598338463}
   - {fileID: 918946877}
-  - {fileID: 776694242}
   - {fileID: 1300684439}
+  - {fileID: 1924432748}

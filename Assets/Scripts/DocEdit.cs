@@ -6,7 +6,7 @@ using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class DocEdit : MonoBehaviour
 {
-    private const string SAVE_SEPARATOR = ","; // Value esparator variable.
+    private const string SAVE_SEPARATOR = ","; // CONST Value esparator variable.
 
     public void SaveNewToDoc(List<string> contents)
     {

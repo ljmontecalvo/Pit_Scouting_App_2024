@@ -8,29 +8,24 @@ using UnityEngine.UI;
 public class InfoGather : MonoBehaviour
 {
     public GameObject[] userInterfaceInputs; // Input Variable
+    public GameObject docEditObject; // Reference to the DocEdit Utility
 
-    public List<string> output = new List<string>(); // Output Variable
+    private List<string> output = new List<string>(); // Output Variable
 
-    public GameObject docEditObject; // Connection to the DocEdit script.
-
-    public void GatherData() // Runs on "Submit" button click.
-    {
-        foreach(GameObject input in userInterfaceInputs)
-        {
-            if (input.gameObject.tag == "Input Field") // Check what input the var in the list is.
-            {
-                output.Add(input.GetComponent<TMP_InputField>().text);
-            } else if (input.gameObject.tag == "Checkbox") // Add input field value.
-            {
-                output.Add(Convert.ToInt32(input.GetComponent<Toggle>().isOn).ToString()); // Add checkbox value.
+    // Compiles the data from the UI elements added to the userInterfaceInputs array.
+    public void SubmitButton() {
+        for (int i = 0; i < userInterfaceInputs.Length; i++) {
+            if (userInterfaceInputs[i].gameObject.tag == "Input Field") { // If the UI element is an input, add its text to the ouput list.
+                output.Add(userInterfaceInputs[i].GetComponent<TMP_InputField>().text);
+            } else if (userInterfaceInputs[i].gameObject.tag == "Checkbox") { // If the UI element is a checkbox, add its value to the ouput list.
+                if (userInterfaceInputs[i].GetComponent<Toggle>().isOn)
+                {
+                    output.Add("1");
+                } else {
+                    output.Add("0");
+                }
             }
         }
-
-        PassToDocEdit();
-    }
-
-    private void PassToDocEdit()
-    {
-        docEditObject.GetComponent<DocEdit>().SaveNewToDoc(output); // Transfers output data to the DocEdit script.
+        docEditObject.GetComponent<DocEdit>().SaveNewToDoc(output);
     }
 }
